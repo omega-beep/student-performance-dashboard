@@ -1,6 +1,6 @@
 # Student Performance Dashboard
 
-> A full-stack web application built with Flask to manage and analyze student performance data.
+- A full-stack web application built with Flask to manage and analyze student performance data.
 
 ---
 
