@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Student Performance Analysis</h1>
+
+<input type="text" id="name" placeholder="Student Name">
+<input type="number" id="marks" placeholder="Marks">
+<input type="number" id="attendance" placeholder="Attendance %">
+
+<button onclick="addStudent()">Add Student</button>
+
+<h2>Student Records</h2>
+
+<input
+    type="text"
+    id="searchInput"
+    placeholder="Search by name"
+    oninput="applyFilters()"
+/>
+
+<select id="gradeFilter" onchange="applyFilters()">
+    <option value="All">All Grades</option>
+    <option value="A">Grade A</option>
+    <option value="B">Grade B</option>
+    <option value="C">Grade C</option>
+    <option value="Fail">Fail</option>
+</select>
+
+<ul id="studentList"></ul>
+
+
+
+<h2>Performance Charts</h2>
+
+<canvas id="marksChart" width="400" height="200"></canvas>
+<br><br>
+<canvas id="statusChart" width="400" height="200"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/static/script.js"></script>
+<p>
+    Logged in as {{ session['user'] }} |
+    <a href="/change-password">Change Password</a> |
+    <a href="/logout">Logout</a>
+</p>
+
+</body>
+</html>
